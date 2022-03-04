@@ -44,6 +44,7 @@ main {
   margin: 6rem 1.5rem;
   border-radius: 20px;
   overflow: hidden;
+  max-width: 350px;
 }
 main h2 {
   font-family: "Big Shoulders Display", cursive;
@@ -75,6 +76,7 @@ main p {
   place-items: center;
   border-radius: 20px;
   font-family: "Lexend Deca", sans-serif;
+  transition: all 0.15s ease;
 }
 .sedans .button {
   color: var(--bright-orange);
@@ -85,7 +87,29 @@ main p {
 .luxury .button {
   color: var(--very-dark-cyan);
 }
+.button:hover {
+  color: var(--very-light-gray);
+  background-color: transparent;
+  border: 2px solid var(--very-light-gray);
+}
 /* ===Footer=== */
 footer {
   margin-block-start: 1rem;
+}
+/* ===Media Queries=== */
+@media only screen and (min-width: 1100px) {
+  main {
+    max-width: 1000px;
+    display: flex;
+    border-radius: 10px;
+  }
+  main h2 {
+    font-size: 3rem;
+  }
+  main p {
+    padding: 0 0.7rem;
+  }
+  .button {
+    margin-block-start: 4rem;
+  }
 }
